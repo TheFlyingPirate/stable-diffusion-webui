@@ -345,7 +345,7 @@ def create_api(app):
 
 def api_only():
     initialize()
-
+    modules.script_callbacks.before_ui_callback()
     app = FastAPI()
     setup_middleware(app)
     api = create_api(app)
